@@ -1,0 +1,27 @@
+[
+  {
+    "locale": "en",
+    "key": "api:tenant-en:user-42",
+    "label": "English / api-user-42"
+  },
+  {
+    "locale": "sr",
+    "key": "api:zakupac-sr:korisnik-42",
+    "label": "Српски / закупац-42"
+  },
+  {
+    "locale": "ja",
+    "key": "api:tenant-ja:ユーザー-42",
+    "label": "日本語 / ユーザー42"
+  },
+  {
+    "locale": "es",
+    "key": "api:inquilino-es:usuario-42",
+    "label": "Español / usuario-42"
+  },
+  {
+    "locale": "de",
+    "key": "api:mandant-de:benutzer-42",
+    "label": "Deutsch / benutzer-42"
+  }
+]

@@ -33,9 +33,55 @@ Thumbs.db
 /bin/
 /dist/
 
-# Environment files
+# Environment files (CONST-053 §4 sensitive-data)
 .env
 .env.local
 .env.*.local
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+id_rsa*
+id_ed25519*
+.netrc
+secrets/
+api_keys.sh
 
 reports/demos/
+
+# CONST-053 §1 build artefacts (extends earlier /bin/ /dist/)
+/build/
+/out/
+target/
+*.a
+*.o
+*.class
+*.pyc
+
+# CONST-053 §2 caches
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+.cache/
+.gradle/
+.terraform/
+
+# CONST-053 §3 temp files (extends *.swp *~)
+*.tmp
+*.orig
+*.rej
+
+# CONST-053 §5 generated reports/logs
+*.log
+coverage.out
+htmlcov/
+
+# CONST-053 §6 OS/IDE personal state (extends .idea/ .vscode/)
+.history/
+
+# round-279 — Challenge captured-evidence artefacts (regenerable, do not version)
+challenges/.captured-evidence/
+challenges/.runner-out/
