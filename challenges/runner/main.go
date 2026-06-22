@@ -1,7 +1,7 @@
 // Package main provides the round-279 Challenge runner for digital.vasic.ratelimiter.
 //
 // This binary is a REAL exerciser of the RateLimiter API. It satisfies the
-// anti-bluff invariants cascaded from the parent HelixCode constitution
+// anti-bluff invariants cascaded from the parent project's constitution
 // (CONST-035, CONST-048, CONST-050, Article XI §11.9):
 //
 //  1. It does NOT mock the system under test. It instantiates the actual

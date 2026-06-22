@@ -10,8 +10,8 @@
 // blockedUntil + retentionTTL has passed.
 //
 // Use case: HTTP auth middleware that progressively delays retries
-// from a misbehaving source. The Lava project (vasic-digital/Lava)
-// consumes this primitive in lava-api-go/internal/auth/backoff.go to
+// from a misbehaving source. A consuming project (for example an
+// HTTP API service) can consume this primitive in its auth layer to
 // translate its operator-mandated ladder (2s, 5s, 10s, 30s, 1m, 1h)
 // into per-IP HTTP 429 + Retry-After responses.
 package ladder

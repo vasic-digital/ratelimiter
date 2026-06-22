@@ -33,7 +33,7 @@ under-throttle on its advertised configuration.
 
 ## Anti-bluff guarantees (round-279)
 
-Per the parent HelixCode constitution (Article XI §11.9, CONST-035,
+Per the parent project's constitution (Article XI §11.9, CONST-035,
 CONST-048, CONST-050) every claim in this README is backed by a real
 runtime exerciser:
 

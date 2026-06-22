@@ -2,7 +2,7 @@
 
 This ledger maps every exported symbol of `digital.vasic.ratelimiter` to the
 tests (unit + challenge) that exercise it with real assertions. It satisfies
-the parent HelixCode cascade — **CONST-035 (Zero-Bluff)**, **CONST-048
+the parent project's cascade — **CONST-035 (Zero-Bluff)**, **CONST-048
 (Full-Automation-Coverage)**, **CONST-050 (No-Fakes-Beyond-Unit-Tests +
 100% Test-Type Coverage)**, **Article XI §11.9** — by making the
 "would-a-real-user-see-this-break" guarantee mechanically inspectable.
