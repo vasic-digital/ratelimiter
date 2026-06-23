@@ -21,6 +21,7 @@ func setupMiniredis(t *testing.T) (*miniredis.Miniredis, goredis.Cmdable) {
 
 	client := goredis.NewClient(&goredis.Options{
 		Addr: mr.Addr(),
+		DialTimeout: 30 * time.Second, ReadTimeout: 30 * time.Second, WriteTimeout: 30 * time.Second, PoolTimeout: 30 * time.Second,
 	})
 	t.Cleanup(func() { client.Close() })
 

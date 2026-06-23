@@ -18,7 +18,7 @@ func TestAllow_RetryAfterOnDenied(t *testing.T) {
 	require.NoError(t, err)
 	defer mr.Close()
 
-	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr()})
+	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr(), DialTimeout: 30 * time.Second, ReadTimeout: 30 * time.Second, WriteTimeout: 30 * time.Second, PoolTimeout: 30 * time.Second})
 	defer client.Close()
 
 	cfg := &limiter.Config{
@@ -46,7 +46,7 @@ func TestAllow_LuaScriptError(t *testing.T) {
 	mr, err := miniredis.Run()
 	require.NoError(t, err)
 
-	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr()})
+	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr(), DialTimeout: 30 * time.Second, ReadTimeout: 30 * time.Second, WriteTimeout: 30 * time.Second, PoolTimeout: 30 * time.Second})
 	defer client.Close()
 
 	cfg := &limiter.Config{
@@ -71,7 +71,7 @@ func TestNew_WithMultipleOptions(t *testing.T) {
 	require.NoError(t, err)
 	defer mr.Close()
 
-	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr()})
+	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr(), DialTimeout: 30 * time.Second, ReadTimeout: 30 * time.Second, WriteTimeout: 30 * time.Second, PoolTimeout: 30 * time.Second})
 	defer client.Close()
 
 	cfg := &limiter.Config{
@@ -89,7 +89,7 @@ func TestReset_NonExistentKey(t *testing.T) {
 	require.NoError(t, err)
 	defer mr.Close()
 
-	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr()})
+	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr(), DialTimeout: 30 * time.Second, ReadTimeout: 30 * time.Second, WriteTimeout: 30 * time.Second, PoolTimeout: 30 * time.Second})
 	defer client.Close()
 
 	rl := New(client, nil)
@@ -103,7 +103,7 @@ func TestAllow_DefaultBurstZero(t *testing.T) {
 	require.NoError(t, err)
 	defer mr.Close()
 
-	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr()})
+	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr(), DialTimeout: 30 * time.Second, ReadTimeout: 30 * time.Second, WriteTimeout: 30 * time.Second, PoolTimeout: 30 * time.Second})
 	defer client.Close()
 
 	cfg := &limiter.Config{
@@ -134,7 +134,7 @@ func TestAllow_ResetAtIsInFuture(t *testing.T) {
 	require.NoError(t, err)
 	defer mr.Close()
 
-	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr()})
+	client := goredis.NewClient(&goredis.Options{Addr: mr.Addr(), DialTimeout: 30 * time.Second, ReadTimeout: 30 * time.Second, WriteTimeout: 30 * time.Second, PoolTimeout: 30 * time.Second})
 	defer client.Close()
 
 	cfg := &limiter.Config{
