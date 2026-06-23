@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # round-279 — RateLimiter describe + paired-mutation Challenge wrapper.
 #
-# This wrapper satisfies the parent HelixCode anti-bluff cascade (CONST-035,
+# This wrapper satisfies the parent project's anti-bluff cascade (CONST-035,
 # CONST-048, CONST-050, Article XI §11.9). It:
 #
 #   1. Runs the REAL Challenge runner (challenges/runner/main.go) which
